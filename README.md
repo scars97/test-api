@@ -1,26 +1,39 @@
 # Test API Server
 
-배포 테스트용 간단한 Spring Boot API 서버입니다.
+배포 테스트용 간단한 Node.js API 서버입니다.
 
 ## 기능
 
 - 단일 API 엔드포인트: `GET /api/hello`
 - JSON 형식의 응답 반환
+- Express 프레임워크 사용
 
-## 실행 방법
+## 사전 요구사항
 
-### 로컬 실행
+- Node.js (v14 이상 권장)
+- npm (Node.js와 함께 설치됨)
+
+## 설치 및 실행
+
+### 1. 의존성 설치
 
 ```bash
-# Gradle Wrapper를 사용하여 실행
-./gradlew bootRun
+npm install
+```
 
-# 또는 빌드 후 실행
-./gradlew build
-java -jar build/libs/test-api-0.0.1-SNAPSHOT.jar
+### 2. 서버 실행
+
+```bash
+npm start
 ```
 
 서버는 기본적으로 `http://localhost:8080`에서 실행됩니다.
+
+포트를 변경하려면 환경 변수를 사용하세요:
+
+```bash
+PORT=3000 npm start
+```
 
 ## API 엔드포인트
 
@@ -44,7 +57,5 @@ curl http://localhost:8080/api/hello
 
 ## 기술 스택
 
-- Java 17
-- Spring Boot 3.2.0
-- Gradle
-
+- Node.js
+- Express.js
