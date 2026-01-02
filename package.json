@@ -4,14 +4,18 @@
   "description": "배포 테스트용 간단한 Node.js API 서버",
   "main": "server.js",
   "scripts": {
+    "build": "echo 'Build completed. Ready for production.'",
     "start": "node server.js",
     "dev": "node server.js"
   },
-  "keywords": ["api", "express", "nodejs"],
+  "keywords": [
+    "api",
+    "express",
+    "nodejs"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
   }
 }
-
