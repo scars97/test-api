@@ -14,6 +14,13 @@ app.get('/api/hello', (req, res) => {
   });
 });
 
+app.get('/api/health', (req, res) => {
+  res.json({
+    message: 'OK',
+    status: 'success',
+  });
+});
+
 // 서버 시작
 app.listen(PORT, () => {
   console.log(`서버가 http://localhost:${PORT} 에서 실행 중입니다.`);
